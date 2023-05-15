@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+ :root{
+    --bg-color: #cce3c4;
+    --second-bg-color: #323232;
+    --text-color: black;
+    --main-color: #4eb5a9 ;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+body{
+    background: var(--bg-color);    
+    color: var(--text-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    font-family:fantasy;
+}
+
+
+.navbar a{
+    font-size: 1.7rem;
+    color: rgb(31, 124, 34);
+    margin-left: 4rem;
+    transition: .3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(0, 0, 0);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.home-img img{
+    width: 35vw;
+    background-color: transparent;
+    align-items: center;
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span{
+    color: var(--main-color);
+
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: .2rem solid rgb(23, 70, 49);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: rgb(51, 200, 108);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5 ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #d1e7c9;
+    padding-bottom: 6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ .heading {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-container  .about-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.about-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.about-box:hover img {
+    transform: scale(1.1);
+}
+
+
+.about-box .about-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-box:hover .about-layer {
+    transform: translateY(0);
+}
+
+.about-layer h4{
+    font-size: 3rem;
+    color: azure;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    color:azure;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+}
+
+
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.portfolio-container  .portfolio-box{
+    flex: 1 1 20rem;
+    background: rgb(102, 133, 106);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(rgb(167, 189, 170));
+    transition: .5s ease;
+}
+
+.portfolio-container  .portfolio-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.portfolio-box img {
+    border: #239789;
+    border-radius: 1cm;
+}
+
+.portfolio-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.portfolio-box h3 {
+    font-size: 2.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.portfolio-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #2f917a;
+    border-radius: 4rem;
+    box-shadow: #2f917a;
+    font-size: 1.6rem;
+    color:rgb(0, 0, 0);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5 ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.table h3{
+    color: #1f2020;
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.table .table-box {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+
+.table .table-data tr, td {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+}
+
+.table .table-title{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.6rem;
+}
+
+.table{
+    background: #d1e7c9;
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact {
+    background: #d1e7c9; ;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.contact form .input-box input, 
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: rgb(168, 181, 169);
+    background: #38433f;
+    border-radius: .8rem;
+    margin: .7rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.contact form .input-box input {
+    width: 49%;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.contact form textarea {
+    resize: none;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.other .video-box{
+    box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1), 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: rgb(58, 200, 117);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #cce3c4;
+    border-radius: .8rem;
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color:rgb(167, 189, 170);
+}
